@@ -15,6 +15,8 @@
       body {
         font-family: 'Open Sans', sans-serif;
         font-size: 100%;
+        -webkit-font-smoothing: antialiased;
+	      -moz-osx-font-smoothing: grayscale;
         position: relative;
         z-index: 0;
         background: #1ABC9C;
@@ -40,6 +42,22 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 2.5rem;
       }
       a.title {
         font-weight: 600;
@@ -77,9 +95,6 @@
         -webkit-transform: rotate(90deg) translateX(-50%);
         transform: rotate(90deg) translateX(-50%);
       }
-      a.instructions:hover, a.donate:hover, p.credit a:hover {
-        opacity: 0;
-      }
       p.credit {
         color: #FFFFFF;
         text-decoration: none;
@@ -97,7 +112,83 @@
         text-decoration: none;
         font-weight: 700;
       }
+      a.instructions, a.donate, p.credit a {
+        transition: all 0.2s ease-in;
+      }
+      a.instructions:hover, a.donate:hover, p.credit a:hover {
+        opacity: .7;
+      }
+      input {
+        width: 100%;
+        max-width: 800px;
+        height: 56px;
+        border-radius: 10px;
+        border: 2px solid #FFFFFF;
+        background: rgba(51, 51, 51, 0.1);
+        color: #FFFFFF;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        margin-top: 80px;
+      }
+      input::-webkit-input-placeholder {
+        color: #FFFFFF;
+        opacity: .6;
+      }
+      input:-ms-input-placeholder {
+        color: #FFFFFF;
+        opacity: .6;
+      }
+      input::placeholder {
+        color: #FFFFFF;
+        opacity: .6;
+      }
+      .buttonWrapper {
+        width: 330px;
+        height: 50px;
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      button {
+        transition: all 0.2s ease-in;
+        width: 150px;
+        height: 100%;
+        font-size: 1rem;
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 2px solid #FFFFFF;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #20E6BE;
+        padding: 2.5px 6px;
+        cursor: pointer;
+        outline: none;
+      }
+      button:last-of-type {
+        color: #37A0E6;
+      }
+      button:hover {
+        background: rgba(255,255,255,0.0);
+        color: #FFFFFF;
+      }
     </style>
+    <script>
+           function encode() {
+              alert("I am an alert box!");
+           }
+        </script>
   </head>
  	<body>
     <div class="contentWrap">
@@ -105,6 +196,11 @@
       <a href="" class="instructions">Instructions</a>
       <a href="https://www.paypal.me/zacharyrnewton" target="_blank" class="donate">Donate</a>
       <p class="credit">A Project By <a href="https://zacharyrnewton.com" target="_blank">Zachary R Newton</a></p>
+      <input type="text" placeholder="Do You Even Dencode Bro?">
+      <div class="buttonWrapper">
+        <button type="button" onclick="encode()">Encode</button>
+        <button type="button" onclick="decode()">Decode</button>
+      </div>
     </div>
  	</body>
  </html>
