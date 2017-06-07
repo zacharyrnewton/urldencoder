@@ -231,7 +231,10 @@
         left: 0;
         background: #141414;
         opacity: 0;
-        display: none;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: tranform 0s 0.3s, opacity 0.3s cubic-bezier(.64,-0.07,.38,1.48);
+        transition: transform 0s 0.3s, opacity 0.3s cubic-bezier(.64,-0.07,.38,1.48);
       }
       .instructionsWrapper {
         display: -webkit-box;
@@ -249,8 +252,10 @@
         bottom: 0;
         left: 0;
         z-index: 20;
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: all 0.4s cubic-bezier(.64,-0.07,.38,1.48);
+        transition: all 0.4s cubic-bezier(.64,-0.07,.38,1.48);
       }
       .instructionsContainer {
         position: relative;
@@ -322,8 +327,11 @@
         box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
       }
       body.instructions .overlay {
-        display: block;
         opacity: 0.6;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: tranform 0s, opacity 0.3s cubic-bezier(.64,-0.07,.38,1.48);
+        transition: transform 0s, opacity 0.3s cubic-bezier(.64,-0.07,.38,1.48);
       }
       body.instructions .instructionsWrapper {
         -webkit-transform: translateX(0);
