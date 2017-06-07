@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+ 		<title>URL Dencoder</title>
+ 		<link rel="icon" type="image/x-icon" href="favicon.ico">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%;
+        position: relative;
+        z-index: 0;
+        background: #1ABC9C;
+        background: -webkit-linear-gradient(right top, #1ABC9C, #2980B9);
+        background: -o-linear-gradient(bottom left, #1ABC9C, #2980B9);
+        background: -moz-linear-gradient(bottom left, #1ABC9C, #2980B9);
+        background: linear-gradient(to bottom left, #1ABC9C, #2980B9);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+      body:after {
+      content: "";
+      background: rgba(255,255,255,0.2);
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      }
+      .contentWrap {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+      }
+      a.title {
+        font-weight: 600;
+        font-size: 1.875rem;
+        color: #FFFFFF;
+        text-align: center;
+        text-decoration: none;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        max-width: 250px;
+      }
+      a.instructions {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1rem;
+        position: absolute;
+        top: calc(50% + 35px);
+        left: -30px;
+        margin: auto;
+        -webkit-transform: rotate(-90deg) translateX(50%);
+        transform: rotate(-90deg) translateX(50%);
+      }
+      a.donate {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1rem;
+        position: absolute;
+        right: -14px;
+        top: calc(15px + 50%);
+        -webkit-transform: rotate(90deg) translateX(-50%);
+        transform: rotate(90deg) translateX(-50%);
+      }
+      a.instructions:hover, a.donate:hover, p.credit a:hover {
+        opacity: 0;
+      }
+      p.credit {
+        color: #FFFFFF;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: 0;
+      }
+      p.credit a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+ 	<body>
+    <div class="contentWrap">
+      <a href="#" class="title">URL Dencoder</a>
+      <a href="" class="instructions">Instructions</a>
+      <a href="https://www.paypal.me/zacharyrnewton" target="_blank" class="donate">Donate</a>
+      <p class="credit">A Project By <a href="https://zacharyrnewton.com" target="_blank">Zachary R Newton</a></p>
+    </div>
+ 	</body>
+ </html>
