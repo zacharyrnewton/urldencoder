@@ -13,7 +13,23 @@
     <meta property="og:url" content="https:/urldencoder.com" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@_zacharyrnewton" />
-  	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://urldencoder.com" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <!--
@@ -60,10 +76,17 @@
       ga('send', 'pageview');
     </script>
     <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --primary: #4F56F2;
+      --secondary: #9754F2;
+    }
     html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       overflow: hidden;
     }
     body {
@@ -73,24 +96,15 @@
       -moz-osx-font-smoothing: grayscale;
       position: relative;
       z-index: 0;
-      background: #1ABC9C;
-      background: -webkit-linear-gradient(right top, #1ABC9C, #2980B9);
-      background: -o-linear-gradient(bottom left, #1ABC9C, #2980B9);
-      background: -webkit-gradient(linear, right top, left bottom, from(#1ABC9C), to(#2980B9));
-      background: -webkit-linear-gradient(top right, #1ABC9C, #2980B9);
-      background: -o-linear-gradient(top right, #1ABC9C, #2980B9);
-      background: linear-gradient(to bottom left, #1ABC9C, #2980B9);
+      background: var(--primary);
+      background: -webkit-linear-gradient(left top, var(--primary), var(--secondary));
+      background: -o-linear-gradient(bottom right, var(--primary), var(--secondary));
+      background: -webkit-gradient(linear, left top, right bottom, from(var(--primary)), to(var(--secondary)));
+      background: -webkit-linear-gradient(top left, var(--primary), var(--secondary));
+      background: -o-linear-gradient(top left, var(--primary), var(--secondary));
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
       background-attachment: fixed;
       background-repeat: no-repeat;
-    }
-    body:after {
-    content: "";
-    background: rgba(255,255,255,0.2);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     }
     button {
       font-family: 'Open Sans', sans-serif;
@@ -119,9 +133,10 @@
       padding: 2.5rem;
     }
     a.title {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1.875rem;
-      color: #FFFFFF;
+      letter-spacing: -.1rem;
+      color: var(--white);
       text-align: center;
       text-decoration: none;
       position: absolute;
@@ -136,14 +151,15 @@
               user-select: none;
     }
     a.instructions {
-      color: #FFFFFF;
+      color: var(--white);
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       text-decoration: none;
-      font-weight: 400;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
       position: absolute;
       top: calc(50% + 35px);
       left: -30px;
@@ -153,14 +169,15 @@
           transform: rotate(-90deg) translateX(50%);
     }
     a.donate {
-      color: #FFFFFF;
+      color: var(--white);
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       text-decoration: none;
-      font-weight: 400;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
       position: absolute;
       right: -14px;
       top: calc(15px + 50%);
@@ -169,15 +186,16 @@
           transform: rotate(90deg) translateX(-50%);
     }
     p.credit {
-      color: #FFFFFF;
+      color: var(--white);
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       text-decoration: none;
       text-align: center;
-      font-weight: 400;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
       position: absolute;
       bottom: 10px;
       left: 0;
@@ -185,14 +203,14 @@
       margin: 0;
     }
     p.credit a {
-      color: #FFFFFF;
+      color: var(--white);
       text-decoration: none;
       font-weight: 700;
     }
     a.instructions, a.donate, p.credit a {
-      -webkit-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
+      -webkit-transition: all 0.1s ease-in;
+      -o-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
     }
     a.instructions:hover, a.donate:hover, p.credit a:hover {
       opacity: .7;
@@ -215,9 +233,9 @@
       flex-grow: 2;
       height: 56px;
       border-radius: 10px 0 0 10px;
-      border: 2px solid #FFFFFF;
-      background: rgba(51, 51, 51, 0.1);
-      color: #FFFFFF;
+      border: 2px solid var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
       font-size: 1rem;
       font-weight: 400;
       padding: 20px;
@@ -225,30 +243,31 @@
       box-sizing: border-box;
       outline: none;
       margin: 0px;
+      caret-color: var(--white);
     }
     input::-webkit-input-placeholder {
-      color: #FFFFFF;
-      opacity: .6;
+      color: var(--white);
+      opacity: .8;
     }
     input:-ms-input-placeholder {
-      color: #FFFFFF;
-      opacity: .6;
+      color: var(--white);
+      opacity: .8;
     }
     input::-ms-input-placeholder {
-      color: #FFFFFF;
-      opacity: .6;
+      color: var(--white);
+      opacity: .8;
     }
     input::placeholder {
-      color: #FFFFFF;
-      opacity: .6;
+      color: var(--white);
+      opacity: .8;
     }
     button.copyButton {
       outline: none;
       width: 60px;
       height: 56px;
       border-radius: 0 10px 10px 0;
-      border: 2px solid #FFFFFF;
-      background: #FFFFFF;
+      border: 2px solid var(--white);
+      background: var(--white);
       cursor: pointer;
       padding: 0;
       -webkit-box-sizing: border-box;
@@ -258,12 +277,14 @@
       height: 25px;
     }
     button.copyButton svg path {
-      -webkit-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
+      -webkit-transition: all 0.1s ease-in;
+      -o-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
+      fill: var(--primary);
     }
+
     button.copyButton:hover svg path {
-      fill: #20E6BE;
+      fill: var(--secondary);
     }
     .buttonWrapper {
       width: 100%;
@@ -282,24 +303,25 @@
       justify-content: space-between;
     }
     .buttonWrapper button {
-      -webkit-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
+      -webkit-transition: all 0.1s ease-in;
+      -o-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
       max-width: 150px;
       width: 100%;
       height: 100%;
       font-size: 1rem;
-      background: #FFFFFF;
+      font-weight: 600;
+      background: var(--white);
       border-radius: 10px;
-      border: 2px solid #FFFFFF;
+      border: 2px solid var(--white);
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      color: #20E6BE;
+      color: var(--secondary);
       padding: 2.5px 6px;
       cursor: pointer;
       outline: none;
-      -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
-      box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+      -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+      box-shadow: 0 2px 3px rgba(0,0,0,0.16);
       margin: 0 .5rem 0 0;
       -webkit-user-select: none;
          -moz-user-select: none;
@@ -307,15 +329,12 @@
               user-select: none;
     }
     .buttonWrapper button:last-of-type {
-      color: #37A0E6;
+      color: var(--primary);
       margin: 0 0 0 .5rem;
     }
     .buttonWrapper button:hover {
-      -webkit-transform: translateY(-1px);
-          -ms-transform: translateY(-1px);
-              transform: translateY(-1px);
-      -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
-      box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
+      -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.16);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.16);
     }
     .overlay {
       position: absolute;
@@ -324,7 +343,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: #141414;
+      background: var(--white);
       opacity: 0;
       -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
@@ -383,8 +402,8 @@
       padding: 1rem 1rem 25px 1rem;
       background: white;
       border-radius: 10px;
-      -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
-      box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+      -webkit-box-shadow: 0px 4px 6px rgba(0,0,0,0.16);
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.16);
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
     }
@@ -392,13 +411,14 @@
       font-size: 1.5625rem;
       text-align: center;
       font-size: 600;
-      color: #333333;
+      color: var(--black);
+      opacity: 0.87;
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
     }
-    .encodeWrapper, .decodeWrapper {
+    .encodeWrapper, .decodeWrapper, .about {
       max-width: 645px;
       margin: auto;
       padding: 1rem;
@@ -409,8 +429,9 @@
       font-weight: 600;
     }
     .instructionsContainer h5, .instructionsContainer p {
-      color: #333333;
+      color: var(--black);
       font-size: 1rem;
+      opacity: .87;
     }
     .instructionsContainer h5 {
       font-weight: 700;
@@ -419,35 +440,32 @@
     .instructionsContainer p {
       font-weight: 400;
       margin: 0;
-      opacity: .85;
+      opacity: .6;
     }
     .instructionsContainer button {
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
-      -webkit-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
+      -webkit-transition: all 0.1s ease-in;
+      -o-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
       outline: none;
       width: 150px;
       height: 50px;
-      background: #20E6BE;
+      background: var(--secondary);
       border: none;
       border-radius: 10px;
       font-size: 1rem;
       color: white;
-      font-weight: 400;
+      font-weight: 600;
       cursor: pointer;
-      -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
-      box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+      -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+      box-shadow: 0 2px 3px rgba(0,0,0,0.16);
     }
     .instructionsContainer button:hover {
-      -webkit-transform: translateY(-1px);
-          -ms-transform: translateY(-1px);
-              transform: translateY(-1px);
-      -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
-      box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
+      -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.16);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.16);
     }
     body.instructions .overlay {
       opacity: 0.6;
@@ -483,7 +501,7 @@
       }
     </script>
   </head>
-  <body>
+  <body >
     <div class="contentWrap">
       <a href="#" class="title">URL Dencoder</a>
       <a href="" onclick="preventDefault()"class="instructions" id="instructions">Instructions</a>
@@ -493,7 +511,7 @@
       <input id="dencoder" type="text" placeholder="Do You Even Dencode Bro?">
       <button class="copyButton btn" data-clipboard-action="copy" data-clipboard-target="#dencoder">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="999 2938 21.154 25">
-          <path fill="#2980b9" d="M64.878,9.906,60.07,5.1H49.493V8.944H43.724V30.1H59.109V26.252h5.769ZM60.07,6.458l3.448,3.448H60.07ZM44.686,29.136V9.906h8.654v4.808h4.808V29.136ZM54.3,10.3l3.448,3.448H54.3ZM59.109,25.29V13.752L54.3,8.944H50.455V6.06h8.654v4.808h4.808V25.29Z" transform="translate(955.276 2932.902)"/>
+          <path fill="#000000" d="M64.878,9.906,60.07,5.1H49.493V8.944H43.724V30.1H59.109V26.252h5.769ZM60.07,6.458l3.448,3.448H60.07ZM44.686,29.136V9.906h8.654v4.808h4.808V29.136ZM54.3,10.3l3.448,3.448H54.3ZM59.109,25.29V13.752L54.3,8.944H50.455V6.06h8.654v4.808h4.808V25.29Z" transform="translate(955.276 2932.902)"/>
         </svg>
       </button>
       </div>
@@ -507,6 +525,9 @@
       <div class="instructionsContainer">
         <h3>Instructions</h3>
         <div>
+          <div class="about">
+            <center><p>How to Encode and Decode URLs using the URI Scheme.</p></center>
+          </div>
           <div class="encodeWrapper">
             <h5>Encoding</h5>
             <p>To encode a URL, type in what you need to encode e.g. “Do You Even Dencode Bro?”, click “Encode”, and result will look like this, <span>“Do%20You%20Even%20Dencode%20Bro%3F”</span></p>
@@ -516,7 +537,7 @@
             <p>To decode a URL, type in an already encoded URL e.g. <span>“Do%20You%20Even%20Dencode%20Bro%3F”</span>, click “Decode”, and result will look like normal again, “Do You Even Dencode Bro?”</p>
           </div>
         </div>
-        <button type="button" id="getToIt">Get to it!</button>
+        <button type="button" id="getToIt">Continue</button>
       </div>
     </div>
     <script type="text/javascript">
